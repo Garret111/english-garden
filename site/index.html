@@ -37,16 +37,23 @@
 
     <section class="section-heading" id="practice"><div><div class="eyebrow">TODAY'S PRACTICE</div><h2>挑一種方式開始</h2></div><span class="date-chip" id="today-label"></span></section>
     <section class="practice-grid">
-      <article class="practice-card word-card"><div class="card-top"><span class="card-icon">A<span>↗</span></span><span class="level">CEFR B1–B2 × 5 題</span></div><h3>進階單字挑戰</h3><p>挑戰中高階字彙，每題標示 CEFR 級別與生活例句。</p><div class="card-foot"><span>約 3 分鐘</span><button class="text-button" data-open="quiz">開始練習 <b>→</b></button></div></article>
-      <article class="practice-card sentence-card" id="phrases"><div class="card-top"><span class="card-icon quote-icon">“ ”</span><span class="level">CEFR B1–B2 × 3 題</span></div><h3>進階例句解謎</h3><p>把中高階單字放進情境句，練習理解和實際用法。</p><div class="card-foot"><span>約 2 分鐘</span><button class="text-button" data-open="sentence">開始練習 <b>→</b></button></div></article>
-      <article class="practice-card listen-card"><div class="card-top"><span class="card-icon sound-icon">♫</span><span class="level">CEFR B1–B2</span></div><h3>進階聽力探索</h3><p>聽中高階單字發音，熟悉拼字、意思與英文節奏。</p><div class="card-foot"><span>不限時間</span><button class="text-button" data-open="listen">開始聆聽 <b>→</b></button></div></article>
+      <article class="practice-card word-card"><div class="card-top"><span class="card-icon">A<span>↗</span></span><span class="level">7,298 字 · A1–C2</span></div><h3>單字闖關</h3><p>從完整分級字庫抽題，每題標示 CEFR、詞性與生活例句。</p><div class="card-foot"><span>每局 5 題</span><button class="text-button" data-open="quiz">開始練習 <b>→</b></button></div></article>
+      <article class="practice-card sentence-card" id="phrases"><div class="card-top"><span class="card-icon quote-icon">“ ”</span><span class="level">7,298 字 · A1–C2</span></div><h3>例句解謎</h3><p>依級別隨機抽出單字，放進情境句練習理解與用法。</p><div class="card-foot"><span>每局 3 題</span><button class="text-button" data-open="sentence">開始練習 <b>→</b></button></div></article>
+      <article class="practice-card listen-card"><div class="card-top"><span class="card-icon sound-icon">♫</span><span class="level">7,298 字 · A1–C2</span></div><h3>聽力探索</h3><p>搜尋並聆聽完整詞庫，查看中文解釋、詞性與 CEFR 分級。</p><div class="card-foot"><span>隨選探索</span><button class="text-button" data-open="listen">開始聆聽 <b>→</b></button></div></article>
+    </section>
+
+    <section class="vocab-section" id="vocabulary">
+      <div class="section-heading"><div><div class="eyebrow">THE WORD GARDEN · 7,298 WORDS</div><h2>探索分級單字庫</h2><p class="vocab-intro">搜尋單字，或選擇 A1 到 C2 級別；闖關也會依此級別抽題。</p></div><span class="date-chip" id="wordbank-status">詞庫載入中…</span></div>
+      <div class="vocab-controls"><label class="search-field">🔎 <input id="word-search" type="search" placeholder="搜尋英文、中文或主題" aria-label="搜尋單字"></label><label class="level-select-label">練習級別<select id="level-filter"><option value="all">全部級別 A1–C2</option><option value="B1-B2" selected>中階 B1–B2</option><option value="A1">A1 入門</option><option value="A2">A2 初級</option><option value="B1">B1 中級</option><option value="B2">B2 中高級</option><option value="C1">C1 高級</option><option value="C2">C2 精通</option></select></label></div>
+      <div class="vocab-results" id="vocab-results" aria-live="polite"></div>
     </section>
 
     <section class="quote-banner"><div class="quote-leaf">❧</div><div><span class="small-label">A NOTE FOR YOU</span><p>“Learning another language is like becoming another person.”</p><small>— Haruki Murakami</small></div><span class="quote-spark">✳</span></section>
-    <footer><span>englishgarden <span class="footer-seed">✿</span></span><span>慢慢來，每一步都算數。</span><a class="footer-source" href="https://www.oxfordlearnersdictionaries.com/external/pdf/wordlists/oxford-3000-5000/The_Oxford_3000_by_CEFR_level.pdf" target="_blank" rel="noopener noreferrer">CEFR 分級參考：Oxford 3000</a></footer>
+    <footer><span>englishgarden <span class="footer-seed">✿</span></span><span>慢慢來，每一步都算數。</span><a class="footer-source" href="https://github.com/designfuchen/word-atlas" target="_blank" rel="noopener noreferrer">詞庫來源：Word Atlas contributors · CC BY 4.0 · 7,298 字</a></footer>
   </main>
 
   <div class="modal-backdrop" id="modal" aria-hidden="true"><section class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title"><button class="modal-close" id="close-modal" aria-label="關閉">×</button><div id="modal-content"></div></section></div>
+  <script src="https://cdn.jsdelivr.net/npm/opencc-js@1.4.2/dist/umd/full.js"></script>
   <script src="app.js"></script>
 </body>
 </html>
