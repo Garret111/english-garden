@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6f4ee">
+  <title>English Garden｜每天一點，英文更自然</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="game.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#home" aria-label="English Garden 首頁"><span class="brand-mark">eg</span><span>english<span class="brand-light">garden</span></span></a>
+    <nav aria-label="主要導覽"><a class="nav-link active" href="#home">學習首頁</a><a class="nav-link" href="#practice">單字練習</a><a class="nav-link" href="#phrases">生活例句</a></nav>
+    <button class="profile" aria-label="使用者設定"><span class="avatar">🌱</span><span class="profile-name">學習者</span></button>
+  </header>
+
+  <main id="home">
+    <section class="welcome">
+      <div><div class="eyebrow"><span class="sun">✳</span> YOUR DAILY ENGLISH ADVENTURE</div><h1>早安，今天的<br><em>任務等你來解鎖。</em></h1><p class="intro">答題拿 XP、連勝加成、收集徽章，讓英文練習變成每日小冒險。</p><a class="primary-btn" href="#missions">開始今天的冒險 <span>↗</span></a></div>
+      <div class="hero-art" aria-label="用心照料英文，讓學習慢慢成長"><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="sun-disc"></div><div class="plant">🌿</div><div class="floating-note note-a">little by little</div><div class="floating-note note-b">✦ keep growing</div><div class="hero-caption">A little every day.</div></div>
+    </section>
+
+    <section class="progress-strip" aria-label="學習進度">
+      <div class="progress-copy"><span class="small-label">本週學習進度</span><strong id="progress-text">0 <small>/ 5 天</small></strong></div>
+      <div class="progress-track"><div class="progress-fill" id="progress-fill"></div></div>
+      <div class="streak"><span>🔥</span><div><strong id="streak-number">0 天</strong><small>連續學習</small></div></div>
+      <div class="word-total"><span>✳</span><div><strong id="word-count">0</strong><small>已學單字</small></div></div>
+    </section>
+
+    <section class="game-strip" id="missions" aria-label="遊戲進度與每日任務">
+      <div class="level-block"><div class="level-seal"><span>LV</span><strong id="level-number">1</strong></div><div><span class="small-label">目前等級</span><strong id="xp-label">0 XP</strong></div></div>
+      <div class="xp-block"><div class="xp-copy"><span>冒險經驗值</span><small id="xp-next">再獲得 100 XP 升級</small></div><div class="xp-track"><div class="xp-fill" id="xp-fill"></div></div></div>
+      <div class="mission-block"><div class="mission-heading"><strong>今日任務</strong><span id="mission-count">0 / 3</span></div><div class="mission-list"><span data-mission="quiz">○ 單字闖關</span><span data-mission="sentence">○ 例句解謎</span><span data-mission="listen">○ 聽力探索</span></div></div>
+      <div class="badge-block"><div class="mission-heading"><strong>徽章收藏</strong><span id="badge-count">0 枚</span></div><div class="badge-list" id="badge-list"></div></div>
+    </section>
+
+    <section class="section-heading" id="practice"><div><div class="eyebrow">TODAY'S PRACTICE</div><h2>挑一種方式開始</h2></div><span class="date-chip" id="today-label"></span></section>
+    <section class="practice-grid">
+      <article class="practice-card word-card"><div class="card-top"><span class="card-icon">A<span>↗</span></span><span class="level">單字 × 5 題</span></div><h3>每日單字挑戰</h3><p>看中文選英文，認識生活裡最常用的字。</p><div class="card-foot"><span>約 3 分鐘</span><button class="text-button" data-open="quiz">開始練習 <b>→</b></button></div></article>
+      <article class="practice-card sentence-card" id="phrases"><div class="card-top"><span class="card-icon quote-icon">“ ”</span><span class="level">情境 × 3 題</span></div><h3>生活例句填空</h3><p>把單字放進句子裡，記得更牢也用得出口。</p><div class="card-foot"><span>約 2 分鐘</span><button class="text-button" data-open="sentence">開始練習 <b>→</b></button></div></article>
+      <article class="practice-card listen-card"><div class="card-top"><span class="card-icon sound-icon">♫</span><span class="level">聽力 × 自由練習</span></div><h3>聽聽今天的單字</h3><p>聽發音、跟著念，練習自然的英文節奏。</p><div class="card-foot"><span>不限時間</span><button class="text-button" data-open="listen">開始聆聽 <b>→</b></button></div></article>
+    </section>
+
+    <section class="quote-banner"><div class="quote-leaf">❧</div><div><span class="small-label">A NOTE FOR YOU</span><p>“Learning another language is like becoming another person.”</p><small>— Haruki Murakami</small></div><span class="quote-spark">✳</span></section>
+    <footer><span>englishgarden <span class="footer-seed">✿</span></span><span>慢慢來，每一步都算數。</span><span>Made for curious minds</span></footer>
+  </main>
+
+  <div class="modal-backdrop" id="modal" aria-hidden="true"><section class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title"><button class="modal-close" id="close-modal" aria-label="關閉">×</button><div id="modal-content"></div></section></div>
+  <script src="app.js"></script>
+</body>
+</html>
+
