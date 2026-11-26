@@ -23,7 +23,7 @@ function save(){localStorage.setItem('eg-progress',JSON.stringify(data));renderP
 function renderProgress(){
   const learned=data.learned||[],days=data.days||[],now=new Date(),monday=new Date(now);monday.setDate(now.getDate()-((now.getDay()+6)%7));monday.setHours(0,0,0,0);
   const thisWeek=days.filter(d=>new Date(`${d}T12:00:00`)>=monday).length;
-  $('#word-count').textContent=learned.length;$('#progress-text').innerHTML=`${thisWeek} <small>/ 5 天</small>`;$('#progress-fill').style.width=`${Math.min(thisWeek/5*100,100)}%`;
+  $('#word-count').textContent=learned.length;$('#progress-text').innerHTML=`${thisWeek} <small>/ 7 天</small>`;$('#progress-fill').style.width=`${Math.min(thisWeek/7*100,100)}%`;
   let streak=0;for(let i=0;i<30;i++){const d=new Date();d.setDate(d.getDate()-i);if(days.includes(dayKey(d)))streak++;else if(i>0)break}
   $('#streak-number').textContent=`${streak} 天`;
 }
