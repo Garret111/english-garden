@@ -6,7 +6,7 @@
   <meta name="theme-color" content="#f6f4ee">
   <title>English Garden｜每天一點，英文更自然</title>
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="game.css">
+  <link rel="stylesheet" href="game.css?v=20261126-3">
 </head>
 <body>
   <header class="topbar">
@@ -42,6 +42,11 @@
       <article class="practice-card listen-card"><div class="card-top"><span class="card-icon sound-icon">♫</span><span class="level">7,298 字 · A1–C2</span></div><h3>聽力探索</h3><p>搜尋並聆聽完整詞庫，查看中文解釋、詞性與 CEFR 分級。</p><div class="card-foot"><span>隨選探索</span><button class="text-button" data-open="listen">開始聆聽 <b>→</b></button></div></article>
     </section>
 
+    <section class="challenge-banner" aria-label="實力檢測挑戰賽">
+      <div><div class="eyebrow">100-QUESTION CHALLENGE</div><h2>實力檢測挑戰賽</h2><p>依上方選定的 CEFR 難度，完成 100 題不重複單字題。結束後查看正確率，並在頁面下方追蹤每次挑戰的成績曲線。</p></div>
+      <button class="challenge-start" data-open="challenge">開始 100 題挑戰 <span>↗</span></button>
+    </section>
+
     <section class="vocab-section" id="vocabulary">
       <div class="section-heading"><div><div class="eyebrow">THE WORD GARDEN · 7,298 WORDS</div><h2>探索分級單字庫</h2><p class="vocab-intro">搜尋單字，或選擇 A1 到 C2 級別；闖關也會依此級別抽題。</p></div><span class="date-chip" id="wordbank-status">詞庫載入中…</span></div>
       <div class="vocab-controls"><label class="search-field">🔎 <input id="word-search" type="search" placeholder="搜尋英文、中文或主題" aria-label="搜尋單字"></label></div>
@@ -49,12 +54,17 @@
     </section>
 
     <section class="quote-banner"><div class="quote-leaf">❧</div><div><span class="small-label">A NOTE FOR YOU</span><p>“Learning another language is like becoming another person.”</p><small>— Haruki Murakami</small></div><span class="quote-spark">✳</span></section>
+    <section class="challenge-history" id="challenge-history">
+      <div class="section-heading"><div><div class="eyebrow">YOUR CHALLENGE RECORDS</div><h2>實力檢測挑戰賽 · 正確率曲線</h2><p class="vocab-intro">每場 100 題，成績只保存在這台裝置的瀏覽器。</p></div><span class="date-chip" id="challenge-record-count">尚無紀錄</span></div>
+      <div class="chart-wrap"><div class="chart-summary"><strong id="challenge-best">完成第一場挑戰後，曲線會顯示在這裡。</strong><span id="challenge-chart-caption">每個點代表一場挑戰</span></div><svg id="challenge-chart" viewBox="0 0 760 240" role="img" aria-label="實力檢測挑戰賽歷次正確率曲線" preserveAspectRatio="none"></svg></div>
+      <div class="challenge-history-table" id="challenge-history-table"></div>
+    </section>
     <footer><span>englishgarden <span class="footer-seed">✿</span></span><span>慢慢來，每一步都算數。</span><a class="footer-source" href="https://github.com/designfuchen/word-atlas" target="_blank" rel="noopener noreferrer">詞庫來源：Word Atlas contributors · CC BY 4.0 · 7,298 字</a></footer>
   </main>
 
   <div class="modal-backdrop" id="modal" aria-hidden="true"><section class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title"><button class="modal-close" id="close-modal" aria-label="關閉">×</button><div id="modal-content"></div></section></div>
   <script src="https://cdn.jsdelivr.net/npm/opencc-js@1.4.2/dist/umd/full.js"></script>
-  <script src="app.js?v=20261126-2"></script>
+  <script src="app.js?v=20261126-3"></script>
 </body>
 </html>
 
