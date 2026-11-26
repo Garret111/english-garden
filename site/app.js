@@ -1,3 +1,4 @@
+const $=s=>document.querySelector(s);
 let challengeWords=[];
 const wordbankUrl='https://raw.githubusercontent.com/designfuchen/word-atlas/main/data/word-atlas.json';
 const toTraditional=window.OpenCC?window.OpenCC.Converter({from:'cn',to:'twp'}):value=>value;
@@ -12,7 +13,6 @@ function renderVocabulary(){if(!challengeWords.length)return;const q=$('#word-se
 function speak(word){if('speechSynthesis'in window){speechSynthesis.cancel();const utter=new SpeechSynthesisUtterance(word);utter.lang='en-US';utter.rate=.82;speechSynthesis.speak(utter)}}
 $('#word-search').addEventListener('input',renderVocabulary);$('#level-filter').addEventListener('change',renderVocabulary);
 const badgeNames={first:'初次出發',streak:'三連勝',words:'單字園丁',daily:'任務全收集'};
-const $=s=>document.querySelector(s);
 let data=JSON.parse(localStorage.getItem('eg-progress')||'{}');
 let combo=0;
 function dayKey(date=new Date()){return `${date.getFullYear()}-${String(date.getMonth()+1).padStart(2,'0')}-${String(date.getDate()).padStart(2,'0')}`}
